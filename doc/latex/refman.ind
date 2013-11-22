@@ -1,0 +1,15 @@
+\begin{theindex}
+
+  \item {indexOf}
+    \subitem {String}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Object}, \hyperpage{5}
+
+  \indexspace
+
+  \item {String}, \hyperpage{6}
+    \subitem {indexOf}, \hyperpage{7}
+
+\end{theindex}
