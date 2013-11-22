@@ -15,6 +15,9 @@ class String extends Object implements \ArrayAccess {
 		$this->mb_str = $str;
 	}
 
+	/**
+	 * Searches for the first occurrence and return the position.
+	 */
 	public function indexOf($str, $offset = 0) {
 		return mb_strpos($this->mb_str, $str, $offset);
 	}
