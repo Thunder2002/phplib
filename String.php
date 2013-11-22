@@ -16,7 +16,10 @@ class String extends Object implements \ArrayAccess {
 	}
 
 	/**
-	 * Searches for the first occurrence and return the position.
+	 * Searches for the first occurrence and return the position
+	 * @param str    The string to find
+	 * @param offset An zero-based offset to start the search from
+	 * @return The zero-based position where the string was found or false if not found
 	 */
 	public function indexOf($str, $offset = 0) {
 		return mb_strpos($this->mb_str, $str, $offset);
