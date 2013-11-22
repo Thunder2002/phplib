@@ -15,4 +15,29 @@ function mb_strrev($str, $enc) {
 	return $rev;
 }
 
+function mb_triml($str) {
+	$chars = implode('|', array("\s", "\t", "\n", "\r", "\0"));
+
+	$res = mb_ereg_replace("^($chars)*", "", $str);
+
+	return $res;
+}
+
+function mb_trimr($str) {
+	$chars = implode('|', array("\s", "\t", "\n", "\r", "\0"));
+
+	$res = mb_ereg_replace("($chars)*$", "", $str);
+
+	return $res;
+}
+
+function mb_trim($str) {
+	$chars = implode('|', array("\s", "\t", "\n", "\r", "\0"));
+
+	$res = mb_ereg_replace("^($chars)*", "", $str);
+	$res = mb_ereg_replace("($chars)*$", "", $res);
+
+	return $res;
+}
+
 ?>
