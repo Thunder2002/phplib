@@ -16,15 +16,21 @@ class String extends Object implements \ArrayAccess {
 	}
 
 	/**
-	 * Searches for the first occurrence and return the position
+	 * Searches for the first occurrence of the string and returnd the position
 	 * @param str    The string to find
-	 * @param offset An zero-based offset to start the search from
+	 * @param offset A zero-based offset to start the search from
 	 * @return The zero-based position where the string was found or false if not found
 	 */
 	public function indexOf($str, $offset = 0) {
 		return mb_strpos($this->mb_str, $str, $offset);
 	}
 
+	/**
+	 * Searches for the first occurrence of any given character and returns the position
+	 * @param chars  The array of characters to find
+	 * @param offset A zero-based offset to start the search from
+	 * @return The zero-based position where a character was found or false if not found
+	 */
 	public function indexOfAny($chars, $offset = 0) {
 		$arr = $this->toArray();
 
@@ -39,6 +45,12 @@ class String extends Object implements \ArrayAccess {
 		return false;
 	}
 
+	/**
+	 * Searches for the last occurrence of the string and returns the position
+	 * @param str    The string to find
+	 * @param offset A zero-based offset to start the search from TODO
+	 * @return The zero-based position where the string was found or false if not found
+	 */
 	public function lastIndexOf($str, $offset = 0) {
 		for ($i = $this->len() - 1; $i >= $offset; --$i) {
 			$idx = mb_strpos($this->mb_str, $str, $i);
@@ -50,6 +62,12 @@ class String extends Object implements \ArrayAccess {
 		return false;
 	}
 
+	/**
+	 * Searches for the last occurrence of any given character and return the position
+	 * @param chars
+	 * @param offset A zero-based offset to start the search from
+	 * @return The zero-based position where a character was found or false if not found
+	 */
 	public function lastIndexOfAny($chars, $offset = 0) {
 		$arr = $this->toArray();
 
@@ -65,10 +83,21 @@ class String extends Object implements \ArrayAccess {
 
 	}
 
+	/**
+	 * Gets the number of bytes the string takes
+	 * @return The number of bytes the string takes
+	 */
 	public function bytes() {
 		return strlen($this->mb_str);
 	}
 
+	/**
+	 * Creates a new String with equal padding to the left and right, 
+	 * if the padding is odd the right padding is bigger
+	 * @param len The total target length, string and padding
+	 * @param ch  The padding character or string
+	 * @return A new String containing the old string and the padding
+	 */
 	public function pad($len, $ch = ' ') {
 		$padLeft = '';
 		$padRight = '';
@@ -82,9 +111,15 @@ class String extends Object implements \ArrayAccess {
 			}
 		}
 
-		return $padLeft . $this->mb_str . $padRight;
+		return new String($padLeft . $this->mb_str . $padRight);
 	}
 
+	/**
+	 * Creates a new String with padding to the left
+	 * @param len The total target length, string and padding
+	 * @param ch  The padding character or string
+	 * @return A new String containing the old string and the padding
+	 */
 	public function padLeft($len, $ch = ' ') {
 		$padLeft = '';
 		$diffLen = $len - $this->len();
@@ -93,9 +128,15 @@ class String extends Object implements \ArrayAccess {
 			$padLeft .= $ch;
 		}
 
-		return $padLeft . $this->mb_str;
+		return new String($padLeft . $this->mb_str);
 	}
 
+	/**
+	 * Creates a new String with padding to the right
+	 * @param len The total target length, string and padding
+	 * @param ch  The padding character or string
+	 * @return A new String containing the old string and the padding
+	 */
 	public function padRight($len, $ch = ' ') {
 		$padRight = '';
 		$diffLen = $len - $this->len();
@@ -104,17 +145,29 @@ class String extends Object implements \ArrayAccess {
 			$padRight .= $ch;
 		}
 
-		return $this->mb_str . $padRight;
+		return new String($this->mb_str . $padRight);
 	}
 
+	/**
+	 * Creates a new trimmed String without leading or following whitespaces
+	 * @return A new trimmed String
+	 */
 	public function trim() {
 		return mb_trim($this->mb_str);
 	}
 
+	/**
+	 * Creates a new trimmed String without following whitespaces
+	 * @return A new trimmed String
+	 */
 	public function trimEnd() {
 		return mb_trimr($this->mb_str);
 	}
 
+	/**
+	 * Creates a new trimmed String without leading whitespaces
+	 * @return A new trimmed String
+	 */
 	public function trimStart() {
 		return mb_triml($this->mb_str);
 	}
@@ -125,14 +178,29 @@ class String extends Object implements \ArrayAccess {
 	public function remove($offset, $len = null) {
 	}
 
+	/**
+	 * Checks whether the String contains the given string
+	 * @param str The string to look for
+	 * @return A boolean to indicate whether the string exists
+	 */
 	public function contains($str) {
 		return $this->indexOf($str) > -1;
 	}
 
+	/**
+	 * Checks wether the String ends with the given string
+	 * @param str The string it should end with
+	 * @return A boolean to indicate wether the string ends with the given one
+	 */
 	public function endsWith($str) {
 		return mb_strpos(mb_strrev($this->mb_str), mb_strrev($str)) === 0;
 	}
 
+	/**
+	 * Checks wether the String starts with the given string
+	 * @param str The string it should start with
+	 * @return A boolean to indicate wether the string starts with the given one
+	 */
 	public function startsWith($str) {
 		return mb_strpos($this->mb_str) === 0;
 	}
@@ -142,22 +210,44 @@ class String extends Object implements \ArrayAccess {
 		// func_get_arg(i)
 	}
 
+	/**
+	 * Creates a new String version with lowercase characters
+	 * @return The new lowercase String
+	 */
 	public function lower() {
 		return mb_strtolower($this->mb_str);
 	}
 
+	/**
+	 * Creates a new String version with uppercase characters
+	 * @return The new uppercase String
+	 */ 
 	public function upper() {
 		return mb_strtoupper($this->mb_str);
 	}
 
+	/**
+	 * Determines the number of characters contained in the String
+	 * @return The number of characters
+	 */
 	public function len() {
 		return mb_strlen($this->mb_str);
 	}
 
+	/**
+	 * Creates a new reversed version of the String
+	 * @return The new reversed String
+	 */
 	public function rev() {
 		return new String(mb_strrev($this->mb_str));
 	}
 
+	/**
+	 * Creates a copy of a portion of the String
+	 * @param offset The zero-based start position
+	 * @param lengh  The length of the portion
+	 * @return A new String containing only the portion of the String
+	 */
 	public function sub($offset, $length = null) {
 		if ($length === null) {
 			$length = mb_strlen($this->mb_str) - $offset;

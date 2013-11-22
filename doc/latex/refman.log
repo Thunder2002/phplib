@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.17)  22 NOV 2013 14:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.17)  22 NOV 2013 16:32
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -814,7 +814,7 @@ Chapter 2.
 
 ]
 Chapter 3.
-(./classObject.tex <classObject.pdf, id=89, 501.875pt x 704.38156pt>
+(./classObject.tex <classObject.pdf, id=179, 501.875pt x 704.38156pt>
 File: classObject.pdf Graphic file (type pdf)
 
 <use classObject.pdf>
@@ -828,42 +828,41 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 \openout2 = `classString.aux'.
 
  (./classString.tex
-<classString.pdf, id=101, 501.875pt x 704.38156pt>
+<classString.pdf, id=191, 501.875pt x 704.38156pt>
 File: classString.pdf Graphic file (type pdf)
  <use classString.pdf>
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 172.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 172.
+[6
 
-(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+ <./classString.pdf>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 126.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 148.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 172.
- [6
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 148.
 
- <./classString.pdf>])
-[7] (./refman.ind [8
-
+[7] [8] [9] [10]) [11] (./refman.ind [12
 
 
 ]) (./refman.aux (./classString.aux)) ) 
 Here is how much of TeX's memory you used:
- 8359 strings out of 493848
- 116375 string characters out of 1152823
+ 8399 strings out of 493848
+ 117214 string characters out of 1152823
  210076 words of memory out of 3000000
- 11416 multiletter control sequences out of 15000+50000
+ 11434 multiletter control sequences out of 15000+50000
  39100 words of font info for 42 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,11n,58p,270b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,58p,270b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvip
 s/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/courier/ucrb8a.pfb></us
 r/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texliv
 e/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
 imes/utmr8a.pfb>
-Output written on refman.pdf (12 pages, 72237 bytes).
+Output written on refman.pdf (16 pages, 109877 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
 

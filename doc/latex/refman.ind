@@ -1,7 +1,35 @@
 \begin{theindex}
 
+  \item {bytes}
+    \subitem {String}, \hyperpage{7}
+
+  \indexspace
+
+  \item {contains}
+    \subitem {String}, \hyperpage{7}
+
+  \indexspace
+
+  \item {endsWith}
+    \subitem {String}, \hyperpage{7}
+
+  \indexspace
+
   \item {indexOf}
     \subitem {String}, \hyperpage{7}
+  \item {indexOfAny}
+    \subitem {String}, \hyperpage{7}
+
+  \indexspace
+
+  \item {lastIndexOf}
+    \subitem {String}, \hyperpage{8}
+  \item {lastIndexOfAny}
+    \subitem {String}, \hyperpage{8}
+  \item {len}
+    \subitem {String}, \hyperpage{8}
+  \item {lower}
+    \subitem {String}, \hyperpage{8}
 
   \indexspace
 
@@ -9,7 +37,57 @@
 
   \indexspace
 
+  \item {pad}
+    \subitem {String}, \hyperpage{8}
+  \item {padLeft}
+    \subitem {String}, \hyperpage{9}
+  \item {padRight}
+    \subitem {String}, \hyperpage{9}
+
+  \indexspace
+
+  \item {rev}
+    \subitem {String}, \hyperpage{9}
+
+  \indexspace
+
+  \item {startsWith}
+    \subitem {String}, \hyperpage{9}
   \item {String}, \hyperpage{6}
+    \subitem {bytes}, \hyperpage{7}
+    \subitem {contains}, \hyperpage{7}
+    \subitem {endsWith}, \hyperpage{7}
     \subitem {indexOf}, \hyperpage{7}
+    \subitem {indexOfAny}, \hyperpage{7}
+    \subitem {lastIndexOf}, \hyperpage{8}
+    \subitem {lastIndexOfAny}, \hyperpage{8}
+    \subitem {len}, \hyperpage{8}
+    \subitem {lower}, \hyperpage{8}
+    \subitem {pad}, \hyperpage{8}
+    \subitem {padLeft}, \hyperpage{9}
+    \subitem {padRight}, \hyperpage{9}
+    \subitem {rev}, \hyperpage{9}
+    \subitem {startsWith}, \hyperpage{9}
+    \subitem {sub}, \hyperpage{10}
+    \subitem {trim}, \hyperpage{10}
+    \subitem {trimEnd}, \hyperpage{10}
+    \subitem {trimStart}, \hyperpage{10}
+    \subitem {upper}, \hyperpage{10}
+  \item {sub}
+    \subitem {String}, \hyperpage{10}
+
+  \indexspace
+
+  \item {trim}
+    \subitem {String}, \hyperpage{10}
+  \item {trimEnd}
+    \subitem {String}, \hyperpage{10}
+  \item {trimStart}
+    \subitem {String}, \hyperpage{10}
+
+  \indexspace
+
+  \item {upper}
+    \subitem {String}, \hyperpage{10}
 
 \end{theindex}
