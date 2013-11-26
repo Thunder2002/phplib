@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.17)  22 NOV 2013 16:32
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.17)  26 NOV 2013 19:15
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -705,7 +705,7 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 
 
 Writing index file refman.idx
-(./refman.aux (./classString.aux))
+(./refman.aux (./classObject.aux) (./classString.aux))
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -784,15 +784,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 2.
-)
+ [1
+
+])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [1
-
-] [2
-
-]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 50.
+ [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 52.
 
 Chapter 1.
@@ -803,10 +803,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 ) [1
 
-]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
- [2
+
+] [2
 
 ]
 Chapter 2.
@@ -814,55 +812,65 @@ Chapter 2.
 
 ]
 Chapter 3.
-(./classObject.tex <classObject.pdf, id=179, 501.875pt x 704.38156pt>
-File: classObject.pdf Graphic file (type pdf)
+(./classArray.tex <classArray.pdf, id=208, 501.875pt x 704.38156pt>
+File: classArray.pdf Graphic file (type pdf)
 
-<use classObject.pdf>
+<use classArray.pdf>
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 14.
  (/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))
-[5 <./classObject.pdf>]
+)
+[5 <./classArray.pdf>]) [6]
+\openout2 = `classObject.aux'.
+
+ (./classObject.tex
+<classObject.pdf, id=256, 501.875pt x 352.1958pt>
+File: classObject.pdf Graphic file (type pdf)
+ <use classObject.pdf>)
+[7
+
+ <./classObject.pdf>]
 \openout2 = `classString.aux'.
 
  (./classString.tex
-<classString.pdf, id=191, 501.875pt x 704.38156pt>
+<classString.pdf, id=269, 501.875pt x 704.38156pt>
 File: classString.pdf Graphic file (type pdf)
  <use classString.pdf>
-[6
+[8
+
 
  <./classString.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 126.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 148.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 136.
  (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 136.
 
-[7] [8] [9] [10]) [11] (./refman.ind [12
+[9] [10] [11] [12]) [13] (./refman.ind [14
 
 
-]) (./refman.aux (./classString.aux)) ) 
+]) (./refman.aux (./classObject.aux)
+(./classString.aux)) ) 
 Here is how much of TeX's memory you used:
- 8399 strings out of 493848
- 117214 string characters out of 1152823
- 210076 words of memory out of 3000000
- 11434 multiletter control sequences out of 15000+50000
+ 8494 strings out of 493848
+ 120728 string characters out of 1152823
+ 211076 words of memory out of 3000000
+ 11479 multiletter control sequences out of 15000+50000
  39100 words of font info for 42 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,11n,58p,270b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvip
-s/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/courier/ucrb8a.pfb></us
-r/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texliv
-e/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
-imes/utmr8a.pfb>
-Output written on refman.pdf (16 pages, 109877 bytes).
+ 38i,12n,58p,270b,395s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</u
+sr/share/texmf-texlive/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-tex
+live/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw
+/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb>
+Output written on refman.pdf (18 pages, 129912 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 272 words of extra memory for PDF output out of 10000 (max. 10000000)
 

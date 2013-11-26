@@ -38,10 +38,7 @@ Inheritance diagram for String:\begin{figure}[H]
 \item 
 \hyperlink{classString_a34b1f94648606639f31a7596445ff52e}{trimStart} ()
 \item 
-\hypertarget{classString_adc4f1d6a5b06b6c610f89131e7b8e403}{
-{\bfseries replace} (\$search, \$replace)}
-\label{classString_adc4f1d6a5b06b6c610f89131e7b8e403}
-
+\hyperlink{classString_adc4f1d6a5b06b6c610f89131e7b8e403}{replace} (\$search, \$replace)
 \item 
 \hypertarget{classString_a0ebde07b97b307aedc7f1f17633b90b1}{
 {\bfseries remove} (\$offset, \$len=null)}
@@ -74,20 +71,11 @@ Inheritance diagram for String:\begin{figure}[H]
 \label{classString_af1ceaa53461e40a69de4f14a115d7d56}
 
 \item 
-\hypertarget{classString_abe7d7e1e2b57ab7dcd01d8e2d1d53148}{
-{\bfseries insert} (\$offset, \$str)}
-\label{classString_abe7d7e1e2b57ab7dcd01d8e2d1d53148}
-
+\hyperlink{classString_abe7d7e1e2b57ab7dcd01d8e2d1d53148}{insert} (\$offset, \$str)
 \item 
-\hypertarget{classString_abacf7b1614b42312f4f49ca064980139}{
-{\bfseries toArray} (\$offset=0, \$len=null)}
-\label{classString_abacf7b1614b42312f4f49ca064980139}
-
+\hyperlink{classString_abacf7b1614b42312f4f49ca064980139}{toArray} (\$offset=0, \$len=null)
 \item 
-\hypertarget{classString_aa7ef98a0c1a4b8b375baf8791e7b773c}{
-{\bfseries toString} ()}
-\label{classString_aa7ef98a0c1a4b8b375baf8791e7b773c}
-
+\hyperlink{classString_aa7ef98a0c1a4b8b375baf8791e7b773c}{toString} ()
 \item 
 \hypertarget{classString_a6a17056cddb17560a093b846c6168537}{
 {\bfseries offsetSet} (\$offset, \$value)}
@@ -164,6 +152,14 @@ Searches for the first occurrence of any given character and returns the positio
 \begin{DoxyReturn}{Returns}
 The zero-\/based position where a character was found or false if not found 
 \end{DoxyReturn}
+\hypertarget{classString_abe7d7e1e2b57ab7dcd01d8e2d1d53148}{
+\index{String@{String}!insert@{insert}}
+\index{insert@{insert}!String@{String}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}String::insert (\$ {\em offset}, \/  \$ {\em str})}}
+\label{classString_abe7d7e1e2b57ab7dcd01d8e2d1d53148}
+Inserts the given string at the given offset 
+\begin{DoxyParams}{Parameters}
+\item[{\em offset}]The offset where to insert the string \item[{\em str}]The string to insert \end{DoxyParams}
 \hypertarget{classString_a18806fe790375032e3fb268f649914d7}{
 \index{String@{String}!lastIndexOf@{lastIndexOf}}
 \index{lastIndexOf@{lastIndexOf}!String@{String}}
@@ -235,6 +231,17 @@ Creates a new \hyperlink{classString}{String} with padding to the right
 \begin{DoxyReturn}{Returns}
 A new \hyperlink{classString}{String} containing the old string and the padding 
 \end{DoxyReturn}
+\hypertarget{classString_adc4f1d6a5b06b6c610f89131e7b8e403}{
+\index{String@{String}!replace@{replace}}
+\index{replace@{replace}!String@{String}}
+\subsubsection[{replace}]{\setlength{\rightskip}{0pt plus 5cm}String::replace (\$ {\em search}, \/  \$ {\em replace})}}
+\label{classString_adc4f1d6a5b06b6c610f89131e7b8e403}
+Replaces the search string with the replacement string 
+\begin{DoxyParams}{Parameters}
+\item[{\em search}]The string to replace \item[{\em replace}]The replacement string \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \hyperlink{classString}{String} with the replaced content 
+\end{DoxyReturn}
 \hypertarget{classString_a47b2739889b38abb582c4eee7d010f91}{
 \index{String@{String}!rev@{rev}}
 \index{rev@{rev}!String@{String}}
@@ -265,6 +272,29 @@ Creates a copy of a portion of the \hyperlink{classString}{String}
 \begin{DoxyReturn}{Returns}
 A new \hyperlink{classString}{String} containing only the portion of the \hyperlink{classString}{String} 
 \end{DoxyReturn}
+\hypertarget{classString_abacf7b1614b42312f4f49ca064980139}{
+\index{String@{String}!toArray@{toArray}}
+\index{toArray@{toArray}!String@{String}}
+\subsubsection[{toArray}]{\setlength{\rightskip}{0pt plus 5cm}String::toArray (\$ {\em offset} = {\ttfamily 0}, \/  \$ {\em len} = {\ttfamily null})}}
+\label{classString_abacf7b1614b42312f4f49ca064980139}
+Creates and array of the characters of the string 
+\begin{DoxyParams}{Parameters}
+\item[{\em offset}]The offset where to begin \item[{\em len}]The max length of the array \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of the characters of the \hyperlink{classString}{String} 
+\end{DoxyReturn}
+\hypertarget{classString_aa7ef98a0c1a4b8b375baf8791e7b773c}{
+\index{String@{String}!toString@{toString}}
+\index{toString@{toString}!String@{String}}
+\subsubsection[{toString}]{\setlength{\rightskip}{0pt plus 5cm}String::toString ()}}
+\label{classString_aa7ef98a0c1a4b8b375baf8791e7b773c}
+Returns the plain string \begin{DoxyReturn}{Returns}
+The plain string 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classObject}{Object}.
+
 \hypertarget{classString_ac3a075e35b0f39698230957bc7d0172d}{
 \index{String@{String}!trim@{trim}}
 \index{trim@{trim}!String@{String}}

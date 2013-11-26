@@ -22,6 +22,15 @@ class StringUnitTest extends \UnitTestCase {
 		$s = new String("Hello World");
 		$this->assertEqual($s->toString(), "Hello World");
 	}
+	function testArrayAccessGet() {
+		$s = new String("Test");
+		$this->assertEqual($s[1], "e");
+	}
+	function testArrayAccessSet() {
+		$s = new String("Test");
+		$s[1] = "a";
+		$this->assertEqual($s->toString(), "Tast");
+	}
 	function testIndexOf() {
 		$s = new String("Hello World");
 		$this->assertEqual($s->indexOf("World"), 6);
@@ -41,6 +50,14 @@ class StringUnitTest extends \UnitTestCase {
 	function testLastIndexOfAny() {
 		$s = new String("Hello World");
 		$this->assertEqual($s->lastIndexOfAny(array("x", "o")), 7);
+	}
+	function testBytes() {
+		$s = new String("Test");
+		$this->assertEqual($s->bytes(), 4);
+	}
+	function testBytes2() {
+		$s = new String("äöü");
+		$this->assertEqual($s->bytes(), 6);
 	}
 	function testPadEven() {
 		$s = new String("Test");
@@ -69,6 +86,24 @@ class StringUnitTest extends \UnitTestCase {
 	function testTrimStart() {
 		$s = new String("   Test   ");
 		$this->assertEqual($s->trimStart(), "Test   ");
+	}
+	function testReplace() {
+		$s = new String("Hello World");
+		$s2 = $s->replace("World", "Funny");
+		$this->assertEqual($s2->toString(), "Hello Funny");
+	}
+	function testInsert() {
+		$s = new String("Hello World");
+		$s->insert(6, "lovely ");
+		$this->assertEqual($s->toString(), "Hello lovely World");
+	}
+	function testToArray() {
+		$s = new String("Test");
+		$chars = $s->toArray();
+		$this->assertEqual($chars[0], "T");
+		$this->assertEqual($chars[1], "e");
+		$this->assertEqual($chars[2], "s");
+		$this->assertEqual($chars[3], "t");
 	}
 }
 

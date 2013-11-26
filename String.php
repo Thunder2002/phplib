@@ -92,7 +92,7 @@ class String extends Object implements \ArrayAccess {
 	}
 
 	/**
-	 * Creates a new String with equal padding to the left and right, 
+	 * Creates a new String with equal padding to the left and right,
 	 * if the padding is odd the right padding is bigger
 	 * @param len The total target length, string and padding
 	 * @param ch  The padding character or string
@@ -172,10 +172,23 @@ class String extends Object implements \ArrayAccess {
 		return mb_triml($this->mb_str);
 	}
 
+	/**
+	 * Replaces the search string with the replacement string
+	 * @param search  The string to replace
+	 * @param replace The replacement string
+	 * @return A new String with the replaced content
+	 */
 	public function replace($search, $replace) {
+		$res = mb_ereg_replace($search, $replace, $this->mb_str);
+		if ($res !== false) {
+			return new String($res);
+		} else {
+			return false;
+		}
 	}
 
 	public function remove($offset, $len = null) {
+		
 	}
 
 	/**
@@ -221,7 +234,7 @@ class String extends Object implements \ArrayAccess {
 	/**
 	 * Creates a new String version with uppercase characters
 	 * @return The new uppercase String
-	 */ 
+	 */
 	public function upper() {
 		return mb_strtoupper($this->mb_str);
 	}
@@ -268,9 +281,21 @@ class String extends Object implements \ArrayAccess {
 		return $res;
 	}
 
+	/**
+	 * Inserts the given string at the given offset
+	 * @param offset The offset where to insert the string
+	 * @param str    The string to insert
+	 */
 	public function insert($offset, $str) {
+		$this->mb_str = $this->sub(0, $offset) . $str . $this->sub($offset, $this->len() - $offset);
 	}
 
+	/**
+	 * Creates and array of the characters of the string
+	 * @param offset The offset where to begin
+	 * @param len    The max length of the array
+	 * @return An array of the characters of the String
+	 */
 	public function toArray($offset = 0, $len = null) {
 		if ($len === null) {
 			$len = $this->len();
@@ -279,7 +304,7 @@ class String extends Object implements \ArrayAccess {
 		$chars = array();
 		$length = $this->len();
 
-		for ($i = 0; $i < $length; ++$i) {
+		for ($i = $offset; $i < $length && $i < ($offset + $len); ++$i) {
 			$chars[] = $this->sub($i, 1);
 		}
 
@@ -287,12 +312,18 @@ class String extends Object implements \ArrayAccess {
 	}
 
 	// Override
+
+	/**
+	 * Returns the plain string
+	 * @return The plain string
+	 */
 	public function toString() {
 		return $this->mb_str;
 	}
 
 	// ArrayAccess methods
 	public function offsetSet($offset, $value) {
+		$this->mb_str = $this->sub(0, $offset) . $value . $this->sub($offset + 1, $this->len() - $offset);
 	}
 	public function offsetGet($offset) {
 		return $this->sub($offset, 1);

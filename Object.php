@@ -11,4 +11,8 @@ class Object {
 	function toString() {
 		return get_class($this);
 	}
+
+	public function __toString() {
+		return $this->toString();
+	}
 }
